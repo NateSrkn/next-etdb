@@ -1,0 +1,44 @@
+.slick-list,
+.slick-track {
+  touch-action: pan-y;
+}
+
+.slick-track {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+.slick-slider {
+  position: relative;
+  .slick-dots {
+    display: flex !important;
+    transform: translate(0px, -35px);
+    justify-content: center;
+    list-style-type: none;
+
+    li {
+      margin: 0 0.15rem;
+      button {
+        cursor: pointer;
+        outline: none;
+        height: 1vh;
+        width: 1vh;
+        color: transparent;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.1);
+
+        &:hover {
+          border-color: rgba(0, 0, 0, 0.1);
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .slick-active {
+      button {
+        border-color: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

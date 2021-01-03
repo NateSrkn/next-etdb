@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik+Mono+One&display=swap");
+@import "./variables";
+@import "./layout";
+@import "./carousel";
+// @import "./search";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  margin: -2px;
+}
+
+.App {
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  max-width: 105rem;
+  margin: 0 auto;
+  @media screen and (max-width: 550px) {
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+footer,
+header {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.group {
+  > div {
+    margin-right: 15px;
+  }
+}
+
+.sub-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: $light-grey;
+  margin: 3px 0;
+
+  &.dark {
+    color: $black;
+  }
+}
+
+.media-card {
+  position: relative;
+  flex: 0 1;
+  &:hover {
+    .rating-bubble {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+  }
+  .rating-bubble {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #000000;
+    color: white;
+    font-size: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    bottom: 1rem;
+    right: 1rem;
+    transition: opacity 0.5s ease;
+    border: 2px solid white;
+  }
+}

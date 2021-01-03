@@ -1,0 +1,9 @@
+.root {
+  width: 100%;
+  position: relative;
+
+  &.backdrop {
+    height: 100vh;
+    max-height: 800px;
+  }
+}
